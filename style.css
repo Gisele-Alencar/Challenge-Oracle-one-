@@ -1,68 +1,87 @@
-/* Estilo inspirado no jogo do número secreto */
-/* Cores personalizadas: fundo cinza, letras pretas, botões rosa */
-
+/* Centraliza todos os elementos do corpo da página (opcional, mas bom para o layout) */
 body {
-  background-color: #d3d3d3; /* fundo cinza */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0; /* Fundo cinza claro */
 }
 
 .container {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: 90%;
-  max-width: 400px;
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    background-color: #ffffff; /* Fundo branco para o container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
 }
 
+/* Centraliza o título */
 h1 {
-  font-size: 28px;
-  color: #000000;
-  margin-bottom: 16px;
+    text-align: center;
+    color: #333;
 }
 
-p {
-  color: #333333;
-  font-size: 16px;
-  margin-bottom: 20px;
+.input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-input[type="number"],
-input[type="text"] {
-  padding: 10px;
-  width: 80%;
-  border: 2px solid #e91e63;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  font-size: 16px;
-  color: #000;
-  background-color: #f9f9f9;
+#nome-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1; /* Permite que o input se expanda */
 }
 
-button {
-  background-color: #e91e63;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+#adicionar-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-button:hover {
-  background-color: #c2185b;
+#lista-nomes {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Alinha a lista à esquerda */
+    margin-bottom: 20px;
 }
 
-#resultado {
-  font-weight: bold;
-  margin-top: 20px;
-  color: #000000;
+#lista-nomes li {
+    background-color: #e9ecef;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.sortear-area {
+    margin-top: 20px;
+    text-align: center; /* Centraliza o botão dentro da sua div */
+}
+
+#sortear-btn {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nome-sorteado {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #d9534f;
 }
