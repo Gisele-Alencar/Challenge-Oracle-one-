@@ -1,0 +1,61 @@
+body {
+  background-color: #a9746e; /* cinza acobreado */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+p {
+  color: black;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.destaque {
+  color: hotpink;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: hotpink;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: deeppink;
+}
+
+#mensagem {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
