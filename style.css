@@ -1,61 +1,68 @@
+/* Estilo inspirado no jogo do número secreto */
+/* Cores personalizadas: fundo cinza, letras pretas, botões rosa */
+
 body {
-  background-color: #a9746e; /* cinza acobreado */
-  font-family: Arial, sans-serif;
+  background-color: #d3d3d3; /* fundo cinza */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
 .container {
-  text-align: center;
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
 }
 
 h1 {
-  color: black;
-  margin-bottom: 10px;
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 16px;
 }
 
 p {
-  color: black;
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.destaque {
-  color: hotpink;
-  font-weight: bold;
-}
-
-input[type="number"] {
-  padding: 10px;
+  color: #333333;
   font-size: 16px;
-  width: 200px;
-  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input[type="number"],
+input[type="text"] {
+  padding: 10px;
+  width: 80%;
+  border: 2px solid #e91e63;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #000;
+  background-color: #f9f9f9;
 }
 
 button {
-  margin-top: 10px;
-  padding: 10px 25px;
-  font-size: 16px;
-  background-color: hotpink;
+  background-color: #e91e63;
   color: white;
   border: none;
+  padding: 12px 20px;
+  font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-  background-color: deeppink;
+  background-color: #c2185b;
 }
 
-#mensagem {
-  font-size: 20px;
+#resultado {
   font-weight: bold;
-  color: black;
+  margin-top: 20px;
+  color: #000000;
 }
