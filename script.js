@@ -2,7 +2,7 @@ const nomeInput = document.getElementById('nome-input');
 const adicionarBtn = document.getElementById('adicionar-btn');
 const listaNomes = document.getElementById('lista-nomes');
 const sortearBtn = document.getElementById('sortear-btn');
-const nomeSorteado = document.getElementById('nome-sorteado');
+const resultado = document.getElementById('resultado');
 
 // Array para armazenar os nomes
 let nomes = [];
@@ -35,6 +35,15 @@ function sortearNome() {
     if (nomes.length > 0) {
         const randomIndex = Math.floor(Math.random() * nomes.length);
         const nomeVencedor = nomes[randomIndex];
+        resultado.textContent = `Nome sorteado: ${nomeVencedor}`;
+    } else {
+        resultado.textContent = 'Nenhum nome para sortear!';
+    }
+}
+
+// Eventos dos botões
+adicionarBtn.addEventListener('click', adicionarNome);
+sortearBtn.addEventListener('click', sortearNome);        const nomeVencedor = nomes[randomIndex];
         nomeSorteado.textContent = `Nome sorteado: ${nomeVencedor}`;
     } else {
         nomeSorteado.textContent = 'Nenhum nome para sortear!';
