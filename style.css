@@ -1,4 +1,3 @@
-/* Centraliza todos os elementos do corpo da página (opcional, mas bom para o layout) */
 body {
     display: flex;
     flex-direction: column;
@@ -6,82 +5,131 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    font-family: sans-serif;
-    background-color: #f0f0f0; /* Fundo cinza claro */
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background-color: #222; /* Cinza escuro moderno */
+    color: #e83e8c; /* Rosa moderno */
 }
 
 .container {
-    text-align: center; /* Centraliza o texto dentro do contêiner */
-    background-color: #ffffff; /* Fundo branco para o container */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 90%;
-    max-width: 500px;
+    text-align: center;
+    background: #2c2c2c; /* Cinza um pouco mais claro que o body */
+    padding: 24px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(232, 62, 140, 0.12);
+    width: 92%;
+    max-width: 520px;
 }
 
-/* Centraliza o título */
 h1 {
     text-align: center;
-    color: #333;
+    color: #e83e8c;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
 }
 
 .input-area {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 22px;
 }
 
 #nome-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    flex-grow: 1; /* Permite que o input se expanda */
+    padding: 12px;
+    border: 1px solid #e83e8c;
+    border-radius: 6px;
+    background: #222;
+    color: #e83e8c;
+    font-size: 1em;
+    flex-grow: 1;
+    transition: border 0.2s;
+}
+
+#nome-input:focus {
+    border-color: #fff;
+    outline: none;
 }
 
 #adicionar-btn {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
+    padding: 12px 18px;
+    background: linear-gradient(90deg, #e83e8c 70%, #ffb6d5 100%);
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#adicionar-btn:hover {
+    background: linear-gradient(90deg, #e83e8c 60%, #fff 100%);
+    transform: scale(1.05);
 }
 
 #lista-nomes {
     list-style-type: none;
     padding: 0;
-    text-align: left; /* Alinha a lista à esquerda */
-    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 22px;
 }
 
 #lista-nomes li {
-    background-color: #e9ecef;
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 4px;
+    background: #353535;
+    color: #e83e8c;
+    padding: 9px 12px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    border-left: 3px solid #e83e8c;
+    transition: background 0.2s;
+}
+
+#lista-nomes li:hover {
+    background: #444;
 }
 
 .sortear-area {
-    margin-top: 20px;
-    text-align: center; /* Centraliza o botão dentro da sua div */
+    margin-top: 24px;
+    text-align: center;
 }
 
 #sortear-btn {
-    padding: 12px 20px;
+    padding: 14px 22px;
     font-size: 1.1em;
-    background-color: #28a745;
-    color: white;
+    background: linear-gradient(90deg, #e83e8c 70%, #ffb6d5 100%);
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#sortear-btn:hover {
+    background: linear-gradient(90deg, #e83e8c 60%, #fff 100%);
+    transform: scale(1.05);
 }
 
 #nome-sorteado {
-    margin-top: 15px;
-    font-size: 1.2em;
+    margin-top: 18px;
+    font-size: 1.25em;
     font-weight: bold;
-    color: #d9534f;
+    color: #ffb6d5; /* Rosa claro para destaque */
+    text-shadow: 0 2px 8px rgba(232,62,140,0.12);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 12px 6px;
+        max-width: 98vw;
+    }
+    .input-area {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #sortear-btn, #adicionar-btn {
+        width: 100%;
+    }
 }
