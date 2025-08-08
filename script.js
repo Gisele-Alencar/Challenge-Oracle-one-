@@ -1,22 +1,24 @@
-const numeroSecreto = Math.floor(Math.random() * 10) + 1;
-let tentativas = 1;
-
-function verificarChute() {
-  const chute = Number(document.getElementById("inputNumero").value);
-  const mensagem = document.getElementById("mensagem");
-
-  if (chute < 1 || chute > 10) {
-    mensagem.textContent = "Digite um número entre 1 e 10!";
-    mensagem.style.color = "red";
+function sortearAmigoSecreto() {
+  if (listaDeAmigos.length < 2) {
+    alert("Adicione pelo menos 2 amigos para o sorteio.");
     return;
   }
 
-  if (chute === numeroSecreto) {
-    mensagem.textContent = `Parabéns! Você acertou o número secreto ${numeroSecreto} em ${tentativas} tentativa(s).`;
-    mensagem.style.color = "green";
-  } else {
-    mensagem.textContent = chute < numeroSecreto ? "Tente um número maior!" : "Tente um número menor!";
-    tentativas++;
-    mensagem.style.color = "hotpink";
+  let sorteio = {};
+  let embaralhados = [...listaDeAmigos].sort(() => Math.random() - 0.5);
+
+  for (let i = 0; i < listaDeAmigos.length; i++) {
+    let amigo = listaDeAmigos[i];
+    let amigoSecreto = embaralhados[i];
+
+    // evitar que a pessoa tire ela mesma
+    if (amigo === amigoSecreto) {
+      return sortearAmigoSecreto(); // refaz o sorteio
+    }
+
+    sorteio[amigo] = amigoSecreto;
   }
+
+  console.log("Sorteio:", sorteio);
+  alert("Sorteio realizado! Confira no console.");
 }
