@@ -9,17 +9,20 @@ let nomes = [];
 
 // Função para adicionar um nome
 function adicionarNome() {
-    const nome = nomeInput.value.trim(); // Pega o valor do input e remove espaços extras
-    if (nome) { // Verifica se o nome não está vazio
-        nomes.push(nome); // Adiciona o nome ao array
-        renderizarNomes(); // Atualiza a lista na tela
-        nomeInput.value = ''; // Limpa o input
+    const nome = nomeInput.value.trim(); // Remove espaços extras
+    if (nome) { 
+        nomes.push(nome); 
+        renderizarNomes(); 
+        nomeInput.value = ''; 
+        nomeInput.focus();
+    } else {
+        alert('Digite um nome antes de adicionar!');
     }
 }
 
 // Função para renderizar os nomes na lista
 function renderizarNomes() {
-    listaNomes.innerHTML = ''; // Limpa o conteúdo atual da lista
+    listaNomes.innerHTML = ''; 
     nomes.forEach(nome => {
         const li = document.createElement('li');
         li.textContent = nome;
@@ -34,7 +37,13 @@ function sortearNome() {
         const nomeVencedor = nomes[randomIndex];
         nomeSorteado.textContent = `Nome sorteado: ${nomeVencedor}`;
     } else {
-        nomeSorteado.textContent = 'Adicione nomes para sortear!';
+        nomeSorteado.textContent = 'Nenhum nome para sortear!';
+    }
+}
+
+// Eventos dos botões
+adicionarBtn.addEventListener('click', adicionarNome);
+sortearBtn.addEventListener('click', sortearNome);        nomeSorteado.textContent = 'Adicione nomes para sortear!';
     }
 }
 
