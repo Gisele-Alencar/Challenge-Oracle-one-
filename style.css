@@ -99,10 +99,10 @@ h1 {
 
 /* Botão "Sortear Nome" */
 #sortear-btn {
-    padding: 11px 20px; /* Aumenta o tamanho, pode ser um pouco maior que o botão de adicionar */
-    font-size: 1.2em; /* Aumenta o tamanho da fonte para destaque */
+    padding: 10px 15px; /* Aumenta o tamanho, pode ser um pouco maior que o botão de adicionar */
+    font-size: 1.0em; /* Aumenta o tamanho da fonte para destaque */
     background: linear-gradient(90deg, #e83e8c 70%, #ffb6d5 100%);
-    color: #fff;
+    color: #463a2a;
     border: none;
     border-radius: 6px;
     cursor: pointer;
