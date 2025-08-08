@@ -16,9 +16,10 @@ body {
     padding: 24px 20px;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(232, 62, 140, 0.12);
-    width: 92%;
-    max-width: 520px;
+    width: 90%;
+    max-width: 380px; /* Esta é a linha que ajusta o tamanho da caixa */
 }
+
 
 h1 {
     text-align: center;
