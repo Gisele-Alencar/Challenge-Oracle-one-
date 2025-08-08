@@ -5,7 +5,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-family: 'Segoe UI', 'Comic Sans MS', Roboto, Roboto;
     background-color: #222; /* Cinza escuro moderno */
     color: #e83e8c; /* Rosa moderno */
 }
@@ -55,7 +55,7 @@ h1 {
 
 /* Botão "Adicionar" */
 #adicionar-btn {
-    padding: 14px 22px; /* Aumenta o tamanho do botão. Ajuste o valor conforme desejar. */
+    padding: 10px 18px; /* Aumenta o tamanho do botão. Ajuste o valor conforme desejar. */
     background: linear-gradient(90deg, #e83e8c 70%, #ffb6d5 100%);
     color: #fff;
     border: none;
@@ -99,7 +99,7 @@ h1 {
 
 /* Botão "Sortear Nome" */
 #sortear-btn {
-    padding: 16px 24px; /* Aumenta o tamanho, pode ser um pouco maior que o botão de adicionar */
+    padding: 11px 20px; /* Aumenta o tamanho, pode ser um pouco maior que o botão de adicionar */
     font-size: 1.2em; /* Aumenta o tamanho da fonte para destaque */
     background: linear-gradient(90deg, #e83e8c 70%, #ffb6d5 100%);
     color: #fff;
