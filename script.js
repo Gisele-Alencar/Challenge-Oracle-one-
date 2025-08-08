@@ -4,37 +4,40 @@ const listaNomes = document.getElementById('lista-nomes');
 const sortearBtn = document.getElementById('sortear-btn');
 const resultado = document.getElementById('resultado');
 
-// Array para armazenar os nomes
 let nomes = [];
 
-// Função para adicionar um nome
 function adicionarNome() {
-    const nome = nomeInput.value.trim(); // Remove espaços extras
-    if (nome) { 
-        nomes.push(nome); 
-        renderizarNomes(); 
-        nomeInput.value = ''; 
-        nomeInput.focus();
+    const nome = nomeInput.value.trim();
+
+    if (nome) {
+        nomes.push(nome);
+        atualizarLista();
+        nomeInput.value = '';
     } else {
         alert('Digite um nome antes de adicionar!');
     }
 }
 
-// Função para renderizar os nomes na lista
-function renderizarNomes() {
-    listaNomes.innerHTML = ''; 
-    nomes.forEach(nome => {
+function atualizarLista() {
+    listaNomes.innerHTML = '';
+    nomes.forEach(n => {
         const li = document.createElement('li');
-        li.textContent = nome;
+        li.textContent = n;
         listaNomes.appendChild(li);
     });
 }
 
-// Função para sortear um nome
 function sortearNome() {
-    if (nomes.length > 0) {
-        const randomIndex = Math.floor(Math.random() * nomes.length);
-        const nomeVencedor = nomes[randomIndex];
+    if (nomes.length === 0) {
+        resultado.textContent = 'Nenhum nome para sortear!';
+        return;
+    }
+    const indice = Math.floor(Math.random() * nomes.length);
+    resultado.textContent = `Nome sorteado: ${nomes[indice]}`;
+}
+
+adicionarBtn.addEventListener('click', adicionarNome);
+sortearBtn.addEventListener('click', sortearNome);        const nomeVencedor = nomes[randomIndex];
         resultado.textContent = `Nome sorteado: ${nomeVencedor}`;
     } else {
         resultado.textContent = 'Nenhum nome para sortear!';
