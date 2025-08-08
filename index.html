@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jogo do Número Secreto</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Sorteador de Nome</title>
 </head>
 <body>
-  <main class="container">
-    <h1>Jogo do Número Secreto</h1>
-    <p>Adivinhe o <span class="destaque">Número Secreto</span> entre 1 e 10</p>
+  <h1>Sorteador de Nome</h1>
 
-    <input type="number" id="inputNumero" placeholder="Digite um número" min="1" max="10"/>
-    <button onclick="verificarChute()">Chutar</button>
+  <input type="text" id="nome" placeholder="Digite o nome">
+  <button onclick="adicionarNome()">Adicionar</button>
 
-    <p id="mensagem"></p>
-  </main>
+  <ul id="lista"></ul>
+
+  <button onclick="sortearNome()">Sortear Nome</button>
+
+  <p id="resultado"></p>
 
   <script src="script.js"></script>
 </body>
