@@ -1,22 +1,34 @@
-const numeroSecreto = Math.floor(Math.random() * 10) + 1;
-let tentativas = 1;
+let nomes = [];
 
-function verificarChute() {
-  const chute = Number(document.getElementById("inputNumero").value);
-  const mensagem = document.getElementById("mensagem");
+function adicionarNome() {
+  const input = document.getElementById("nome");
+  const nome = input.value.trim();
 
-  if (chute < 1 || chute > 10) {
-    mensagem.textContent = "Digite um número entre 1 e 10!";
-    mensagem.style.color = "red";
+  if (nome !== "") {
+    nomes.push(nome);
+    atualizarLista();
+    input.value = "";
+    input.focus();
+  }
+}
+
+function atualizarLista() {
+  const ul = document.getElementById("lista");
+  ul.innerHTML = "";
+
+  nomes.forEach((nome) => {
+    const li = document.createElement("li");
+    li.textContent = nome;
+    ul.appendChild(li);
+  });
+}
+
+function sortearNome() {
+  if (nomes.length === 0) {
+    alert("Adicione pelo menos um nome para sortear.");
     return;
   }
 
-  if (chute === numeroSecreto) {
-    mensagem.textContent = `Parabéns! Você acertou o número secreto ${numeroSecreto} em ${tentativas} tentativa(s).`;
-    mensagem.style.color = "green";
-  } else {
-    mensagem.textContent = chute < numeroSecreto ? "Tente um número maior!" : "Tente um número menor!";
-    tentativas++;
-    mensagem.style.color = "hotpink";
-  }
+  const sorteado = nomes[Math.floor(Math.random() * nomes.length)];
+  document.getElementById("resultado").textContent = `Nome sorteado: ${sorteado}`;
 }
