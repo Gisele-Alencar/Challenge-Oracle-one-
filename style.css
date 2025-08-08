@@ -38,12 +38,12 @@ h1 {
 }
 
 #nome-input {
-    padding: 12px;
+    padding: 8px;
     border: 1px solid #e83e8c;
     border-radius: 6px;
     background: #222;
     color: #e83e8c;
-    font-size: 1em;
+    font-size: 0.9em;
     flex-grow: 1;
     transition: border 0.2s;
 }
@@ -55,7 +55,7 @@ h1 {
 
 /* Botão "Adicionar" */
 #adicionar-btn {
-    padding: 10px 18px; /* Aumenta o tamanho do botão. Ajuste o valor conforme desejar. */
+    padding: 8px 11px; /* Aumenta o tamanho do botão. Ajuste o valor conforme desejar. */
     background: linear-gradient(90deg, #e83e8c 70%, #ffb6d5 100%);
     color: #fff;
     border: none;
@@ -63,7 +63,7 @@ h1 {
     cursor: pointer;
     font-weight: 600;
     transition: background 0.2s, transform 0.1s;
-    font-size: 1.1em; /* Aumenta o tamanho da fonte para acompanhar o novo padding */
+    font-size: 0.9em; /* Aumenta o tamanho da fonte para acompanhar o novo padding */
 }
 
 #adicionar-btn:hover {
